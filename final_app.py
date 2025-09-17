@@ -11,7 +11,7 @@ from prompts import FEEDBACK_PROMPT, LECTURE_PROMPT
 load_dotenv()  # take environment variables from .env file
 
 # ========== CONFIG ==========
-openai.api_key = os.getenv("OPENAI_API_KEY")  # set your API key as env var
+openai.api_key = st.secrets["OPENAI_API_KEY"]  # set your API key as env var
 
 
 
@@ -338,4 +338,5 @@ st.markdown("""
     <p>🚀 Powered by AI • Built with Streamlit</p>
     <p><small>Transform your teaching experience with intelligent feedback analysis and lecture critiques</small></p>
 </div>
+
 """, unsafe_allow_html=True)
